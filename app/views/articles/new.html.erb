@@ -1,0 +1,23 @@
+<h1>New article</h1>
+
+<%= form_with scope: :article, url: articles_path, local: true do |form| %>
+<!-- form_with = you pass it an identifying scope for this form, in this case it
+is the symbol :article, This tells the form_with helper what this form is for.
+Inside the block for this method, the FormBuilder object - represented by form -
+is used to build two labels and two text fields, one each for the title and text
+of an article. Finally, a call to submit on the form object will create a submit
+button for the form.-->
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
