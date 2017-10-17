@@ -7,3 +7,28 @@
   <strong>Text:</strong>
   <%= @article.text %>
 </p>
+
+
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @article.text %>
+</p>
+
+<%= link_to 'Back', articles_path %>
+
+<!-- link to the app/views/articles/show.html.erb template to go back to the
+ index action as well, so that people who are viewing a single article can
+ go back and view the whole list again -->
+
+ <!-- If you want to link to an action in the same controller, you don't need
+ to specify the :controller option, as Rails will use the current controller
+ by default.
+
+ In development mode (which is what you're working in by default), Rails
+ reloads your application with every browser request, so there's no need
+ to stop and restart the web server when a change is made. -->

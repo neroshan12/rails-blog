@@ -1,9 +1,13 @@
 class ArticlesController < ApplicationController  # inherits from application controller
+  def index
+    @articles = Article.all
+  end
+  
   def show
     @article = Article.find(params[:id]) # A couple of things to note. We use Article.find
     # to find the article we're interested in, passing in params[:id] to get the :id parameter
     # from the request. We also use an instance variable (prefixed with @) to hold a reference
-    # to the article object. We do this because Rails will pass all instance variables to the 
+    # to the article object. We do this because Rails will pass all instance variables to the
     # view.
 
   end

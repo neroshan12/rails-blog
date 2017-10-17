@@ -20,4 +20,10 @@ button for the form.-->
   <p>
     <%= form.submit %>
   </p>
+
+<%= form_with scope: :article, url: articles_path, local: true do |form| %>
+  ...
+<% end %>
+
+<%= link_to 'Back', articles_path %>
 <% end %>
